@@ -1,25 +1,37 @@
-# Vue Event Proxy
+# Vue Global EventBus
 
 ## Introduction
 
 Let Vue.js support global events
 
+TypeScript support already (actually this plugin is written by TypeScript)
+
 ## install
-```
-$ npm install --save vue-event-proxy
+
+```bash
+$ npm i vue-geventbus -S
+# or
+$ yarn add vue-geventbus -S
 ```
 
 ## Usage
-Just add `global:` prefix
 
-```
-  import EventProxy from 'vue-event-proxy';
-  Vue.use(EventProxy);
+1.  Install this Vue plugin
 
-  this.$on('global:EVENT_NAME');
-  this.$once('global:EVENT_NAME');
-  this.$emit('global:EVENT_NAME');
-  
+```js
+import VueEventBus from "vue-geventbus";
+Vue.use(VueEventBus);
 ```
+
+2.  use Global Event function
+    just like `Vue.$on` ,`Vue.$emit`, but this plugin handle global event
+    below is the table
+
+| Vue Api | VueEventBus Api |
+| ------- | --------------- |
+| $on     | $gon            |
+| $once   | $gonce          |
+| $emit   | $gemit          |
+| $off    | $goff           |
 
 More see: [https://cn.vuejs.org/v2/api/#vm-on](https://cn.vuejs.org/v2/api/#vm-on)
