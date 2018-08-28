@@ -4,7 +4,7 @@
   "description": "Global EventBus for Vue 2.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "types/vue.d.ts",
+  "types": "types/index.d.ts",
   "files": [
     "src/*.ts",
     "dist/*.js",
